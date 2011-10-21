@@ -26,3 +26,44 @@ function commerce_dummy_types_commerce_customer_profile_type_info() {
 
   return $profile_types;
 }
+
+/**
+ * Implements hook_commerce_line_item_type_info().
+ */
+function commerce_dummy_types_commerce_line_item_type_info() {
+  $line_item_types = array();
+
+  $line_item_types['dummy_line_item_1'] = array(
+    'name' => t('Dummy line item type #1'),
+    'description' => t('Defines a line item type for testing #1.'),
+    'product' => TRUE,
+    'add_form_submit_value' => t('Dummy line item #1'),
+    'base' => 'commerce_dummy_types_line_item',
+  );
+
+  return $line_item_types;
+}
+
+/**
+ * Configuration callback
+ */
+function commerce_dummy_types_line_item_configuration($line_item_type) {
+  // No need of fields.
+}
+
+/**
+ * Returns an appropriate title for this line item.
+ */
+function commerce_dummy_types_line_item_title($line_item) {
+  return 'Dummy line item';
+}
+
+/**
+ * Returns the elements necessary to add a product line item through a line item
+ *   manager widget.
+ */
+function commerce_dummy_types_line_item_add_form() {
+  $form = array();
+
+  return $form;
+}
