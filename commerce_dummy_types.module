@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Customer profiles.
+ */
+
+/**
+ * Implements hook_commerce_customer_profile_type_info().
+ */
+function commerce_dummy_types_commerce_customer_profile_type_info() {
+  $profile_types = array();
+
+  $profile_types['dummy_customer_1'] = array(
+    'type' => 'dummy_customer_1',
+    'name' => t('Dummy customer profile #1'),
+    'description' => t('Profile used for testing #1.'),
+    'help' => '',
+  );
+
+  $profile_types['dummy_customer_2'] = array(
+    'type' => 'dummy_customer_2',
+    'name' => t('Dummy customer profile #2'),
+    'description' => t('Profile used for testing #2.'),
+    'help' => '',
+  );
+
+  return $profile_types;
+}

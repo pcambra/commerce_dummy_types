@@ -1,0 +1,6 @@
+name = Dummy types
+description = Provides dummy types for customer and line items
+package = Commerce (fake)
+dependencies[] = commerce
+dependencies[] = entity
+core = 7.x
